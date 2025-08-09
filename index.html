@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaviya's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      background-color: #0d0d0d;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    #about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #about img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .resume-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00ffff;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project-card {
+      background: rgba(30, 30, 30, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 15px 0;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      color: white;
+      max-width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #ffffff0f;
+      border: 1px solid #ffffff33;
+      border-radius: 8px;
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    .project-card a:hover {
+      background: #00ffff33;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      background-color: #1e1e1e;
+      color: white;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #00ffff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00cccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="about-text">
+      <h1>Kaviya Krishnan</h1>
+I’m someone who’s genuinely curious about data and how it can tell a story. I’m passionate about digging into the numbers to find patterns, uncover insights, and help teams make smarter decisions. For me, data isn’t just about charts and figures—it’s a powerful tool to solve real business problems and drive meaningful impact.      <a class="resume-btn" href="KAVIYA KRISHNAN.pdf" download>Download Resume</a>
+    </div>
+    <img src="WIN_20250310_16_27_09_Pro.jpg" alt="Kaviya's Photo">
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Credit Card Analysis For Collection Strategy</h3>
+      <p>This is Power BI Report To Analyse the credit card customer data for efficient the payment collection.</p>
+      <a href="https://github.com/Kaviyakri/Credit-Card-Data-Analysis-For-Collection-Strategy" target="_blank">🔗 View on GitHub</a>
+    </div>
+    <!-- More projects can be added below by duplicating .project-card -->
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form name="submit-to-google-sheet">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="msg"></p>
+     <p>
+    📧 Email: <a href="mailto:your.email@example.com" style="color:#4da6ff;">krishnankaviya39@gmail.com</a>  <br>
+
+    🔗 LinkedIn: <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" style="color:#4da6ff;">https://www.linkedin.com/in/kaviya-krishnan-815283227</a>
+  </p>
+  </section>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzqCO9reL4Ik54NpHnzYMGPm1moo4bGDiG7aLrQvUOYpr5dlE6EV-Ks0Re6WC9b_ZY/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = 'Message sent successfully';
+          setTimeout(() => { msg.innerHTML = ''; }, 3000);
+          form.reset();
+        })
+        .catch(error => {
+          msg.innerHTML = 'Something went wrong';
+          console.error('Error!', error.message);
+        });
+    });
+  </script>
+</body>
+</html>
