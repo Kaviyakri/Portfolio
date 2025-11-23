@@ -1,0 +1,18 @@
+
+ EVENT MANAGEMENT DATA HACKATHON
+
+Problem Statement
+The core challenge addressed was the lack of a unified, data-driven framework for evaluating event success and financial efficiency.
+Optimizing Event Mix: Not knowing which event formats (In-Person, Virtual, Hybrid) or categories deliver the best Return on Investment (ROI).
+Cost Inefficiency: Failing to balance investment costs with attendance and profit margins, leading to unsustainable event models.
+Unclear Success Drivers: Not isolating the specific factors (like hospitality or capacity) that truly influence attendee commitment and satisfaction (Ratings).
+Key Insights & Data-Driven Recommendations
+Financial Efficiency is Key: The analysis confirmed an inverse relationship between the Average Investment Per Ticket and Gross Profit Margin. Successful organizers consistently demonstrate low investment per ticket relative to their total revenue, highlighting the necessity of sharp cost control for scalability.
+
+Hospitality Boosts Commitment: Events providing Lunch/Snacks consistently showed higher average ratings and attendance, proving that attendee comfort and perceived value are essential, measurable drivers of commitment and satisfaction.
+
+Scarcity Drives Conversion: The data revealed that event success is tied to optimal, not maximal, capacity. Events with tight Seating Capacity relative to demand often see higher Attendance Conversion Rates, indicating that strategic scarcity is a powerful marketing and commitment tool.
+
+Format Profitability Varies: The project identified which Event Format (In-Person, Virtual, Hybrid) contributed the most to Total Gross Profit and which delivered the highest Gross Profit Margin, allowing for targeted resource allocation based on strategic goals (volume vs. efficiency).
+
+Top Organizer Benchmarking: The creation of a Combined Performance Score (weighting Profit and Satisfaction) successfully identified the Top 5 Organizers, providing internal benchmarks for cost management and attendee experience standards across the organization.
